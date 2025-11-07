@@ -116,13 +116,13 @@
     <section class="card">
       <header>
         <div class="chips">
-          <span class="chip">🎮 Gamer Kids</span>
+          <span class="chip">🎮 Camas Elásticas</span>
           <span class="chip alt">🎉 Fiesta Infantil</span>
-          <span class="chip">⭐ Efectos animados</span>
+          <span class="chip">⭐ Toboganes</span>
           <span class="chip alt">📍 Melipilla</span>
         </div>
-        <h1 class="title">¡Estás invitad@ al cumple de <span style="color:var(--acc)">Dante Brito Salinas</span>!</h1>
-        <p class="subtitle">Ven a celebrar sus <strong>5 años</strong> con temática gamer, Cristiano Ronaldo y ¡guerreras K‑Pop!</p>
+        <h1 class="title">¡Estás invitad@ al cumple de <span style="color:var(--acc)">Dantecito</span>!</h1>
+        <p class="subtitle">Ven a celebrar sus <strong>5 años</strong> con temática con muchos juegos y diversión!!</p>
       </header>
 
       <div class="hero">
@@ -134,7 +134,7 @@
 
             <div class="dt">
               <div class="dt-row"><span>📅</span><div><span class="b">Sábado 15 de noviembre de 2025</span></div></div>
-              <div class="dt-row"><span>⏰</span><div><span class="b" id="hora">16:00 a 19:00</span> <em style="opacity:.75">(ajustable)</em></div></div>
+              <div class="dt-row"><span>⏰</span><div><span class="b" id="hora">17:30 a 20:00</span> <em style="opacity:.75"></em></div></div>
               <div class="dt-row"><span>📍</span><div><span class="b">Parque Mágico Melipilla</span> — Ortúzar 192</div></div>
             </div>
 
@@ -151,9 +151,9 @@
           <div class="gallery">
             <!-- Cristiano Ronaldo (foto CC/Wikimedia; puedes reemplazar por otra) -->
             <figure class="tile">
-              <img alt="Cristiano Ronaldo" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Cristiano_Ronaldo_2018.jpg"/>
+              <img alt="Cristiano Ronaldo" src="https://www.sopitas.com/wp-content/uploads/2023/06/cristiano-ronaldo-sigificado-festejo-siuu.jpg"/>
               <figcaption class="badge">Cristiano Ronaldo</figcaption>
-              <small class="credit">Foto: Wikimedia Commons</small>
+              <small class="credit">...</small>
             </figure>
 
             <!-- Guerreras K‑Pop (ilustración SVG inline de estilo chibi) -->
@@ -217,8 +217,8 @@
     const EDAD = 5;
     const FECHA = '2025-11-15'; // ISO
     const DIA_TEXTO = 'Sábado 15 de noviembre de 2025';
-    const HORA_INICIO = '16:00';
-    const HORA_FIN = '19:00';
+    const HORA_INICIO = '17:30';
+    const HORA_FIN = '20:00';
     const TITULO = `Cumpleaños de ${NOMBRE} (${EDAD})`;
     const LUGAR_NOMBRE = 'Parque Mágico Melipilla';
     const LUGAR_DIR = 'Ortúzar 192';
@@ -240,7 +240,7 @@
         `DTEND:${dt(FECHA, HORA_FIN)}`,
         `SUMMARY:${TITULO}`,
         `LOCATION:${LUGAR.replace(/,/g,'\,')}`,
-        'DESCRIPTION:¡Te esperamos! Temática gamer, Cristiano Ronaldo y guerreras K‑Pop.',
+        'DESCRIPTION:¡Te esperamos! ',
         'END:VEVENT','END:VCALENDAR' ].join('\r\n');
       const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
       const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'Invitacion-Cumple-Dante.ics'; a.click(); URL.revokeObjectURL(a.href);
